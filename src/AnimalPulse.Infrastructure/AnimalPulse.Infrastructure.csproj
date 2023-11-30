@@ -19,6 +19,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.*" />
     <PackageReference Include="Scrutor" Version="*" />
     <PackageReference Include="Serilog" Version="*" />
     <PackageReference Include="Serilog.AspNetCore" Version="7.*" />

@@ -1,4 +1,4 @@
-namespace AnimalPulse.Application.Queries;
+namespace AnimalPulse.Application.Queries.Handlers;
 
 public interface IQueryHandler<in TQuery, TResult> 
     where TQuery : class, IQuery<TResult>
