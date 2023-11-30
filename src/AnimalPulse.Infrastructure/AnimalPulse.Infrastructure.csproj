@@ -6,8 +6,24 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="AnimalPulse.Integration"/>
-    <InternalsVisibleTo Include="AnimalPulse.Unit"/>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="AnimalPulse.Integration" />
+    <InternalsVisibleTo Include="AnimalPulse.Unit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AnimalPulse.Application\AnimalPulse.Application.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Scrutor" Version="*" />
+    <PackageReference Include="Serilog" Version="*" />
+    <PackageReference Include="Serilog.AspNetCore" Version="7.*" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="*" />
+    <!-- <PackageReference Include="Serilog.Sinks.Seq" Version="6.0.0" /> -->
   </ItemGroup>
 
 </Project>

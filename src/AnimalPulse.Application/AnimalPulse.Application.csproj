@@ -6,8 +6,12 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <InternalsVisibleTo Include="AnimalPulse.Integration"/>
-    <InternalsVisibleTo Include="AnimalPulse.Unit"/>
+    <InternalsVisibleTo Include="AnimalPulse.Integration" />
+    <InternalsVisibleTo Include="AnimalPulse.Unit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AnimalPulse.Core\AnimalPulse.Core.csproj" />
   </ItemGroup>
 
 </Project>
