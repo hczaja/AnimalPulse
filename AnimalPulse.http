@@ -1,4 +1,21 @@
 @url = http://localhost:5168
+@patientId = 00000000-0000-0000-0000-000000000000
+
+
+// Patients API ================
 
 ###
-GET {{url}}/
+GET {{url}}/patients
+
+###
+GET {{url}}/patients/{{patientId}}
+
+###
+POST {{url}}/patients
+Content-Type: application/json
+
+{
+    "name" : "Reksio",
+    "dateOfBirth": "2023-04-20"
+    
+}

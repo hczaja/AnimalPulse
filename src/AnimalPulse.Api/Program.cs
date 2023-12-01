@@ -1,8 +1,8 @@
 using AnimalPulse.Api;
-using AnimalPulse.Core;
 using AnimalPulse.Application;
 using AnimalPulse.Infrastructure;
 using AnimalPulse.Infrastructure.Logging;
+using AnimalPulse.Core;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +16,6 @@ builder.UseSerilog();
 var app = builder.Build();
 
 app.UseInfrastructure();
-app.UseTreatmentsApi();
+app.UsePatientsApi();
 
 app.Run();

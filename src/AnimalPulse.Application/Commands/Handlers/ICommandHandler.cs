@@ -1,4 +1,4 @@
-namespace AnimalPulse.Application.Commands;
+namespace AnimalPulse.Application.Commands.Handlers;
 
 public interface ICommandHandler<in TCommand> 
     where TCommand : class, ICommand 
