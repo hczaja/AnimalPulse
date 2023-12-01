@@ -16,6 +16,9 @@ Content-Type: application/json
 
 {
     "name" : "Reksio",
+    "type" : "Dog",
+    "breed" : "mixed",
+    "gender" : "Male",
+    "description" : "",
     "dateOfBirth": "2023-04-20"
-    
 }

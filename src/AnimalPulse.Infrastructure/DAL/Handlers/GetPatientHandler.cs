@@ -20,6 +20,6 @@ internal sealed class GetPatientHandler : IQueryHandler<GetPatient, PatientDto>
             .AsNoTracking()
             .SingleOrDefaultAsync(x => x.Id == patientId);
 
-        return patient?.AsDto();;
+        return patient?.AsDto();
     }
 }

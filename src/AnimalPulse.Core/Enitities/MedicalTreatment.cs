@@ -13,8 +13,8 @@ public class MedicalTreatment
 
     public DateTimeOffset StartedAt { get; private set; }
 
-    private readonly List<IMedicalMonitor> _monitors = new();
-    public IEnumerable<IMedicalMonitor> Monitors => _monitors;
+    private readonly List<MedicalMonitor> _monitors = new();
+    public IEnumerable<MedicalMonitor> Monitors => _monitors;
 
     public MedicalTreatment(
         TreatmentId id, PatientId patientId, TreatmentTitle title, 
