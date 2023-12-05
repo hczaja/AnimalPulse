@@ -16,7 +16,10 @@ namespace AnimalPulse.Core.Enitities
         private readonly List<MedicalTreatment> _treatments = new();
         public IEnumerable<MedicalTreatment> Treatments => _treatments;
 
-        public Patient(PatientId id, PatientName name, PatientType type, PatientBreed breed,
+        public static Patient Create(PatientId id, PatientName name, PatientType type, PatientBreed breed,
+            PatientGender gender, DateTime dateOfBirth, PatientDescription description, DateTimeOffset dateOfRegister)
+                => new Patient(id, name, type, breed, gender, dateOfBirth, description, dateOfRegister);
+        private Patient(PatientId id, PatientName name, PatientType type, PatientBreed breed,
             PatientGender gender, DateTime dateOfBirth, PatientDescription description, DateTimeOffset dateOfRegister)
                 => (Id, Name, Type, Breed, Gender, DateOfBirth, Description, DateOfRegister) 
                     = (id, name, type, breed, gender, dateOfBirth, description, dateOfRegister);

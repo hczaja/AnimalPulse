@@ -1,5 +1,6 @@
 using System.Diagnostics;
 using AnimalPulse.Application.Commands;
+using AnimalPulse.Application.Commands.Handlers;
 using Microsoft.Extensions.Logging;
 
 namespace AnimalPulse.Infrastructure.Logging.Decorators;

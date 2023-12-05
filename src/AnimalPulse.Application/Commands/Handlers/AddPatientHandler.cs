@@ -30,7 +30,7 @@ public class AddPatientHandler : ICommandHandler<AddPatient>
         var description = new PatientDescription(command.Description);
         var registerData = command.DateOfRegister;
 
-        var patient = new Patient(id, name, type, breed, gender, birthDate, description, registerData);
+        var patient = Patient.Create(id, name, type, breed, gender, birthDate, description, registerData);
 
         await _patientRepository.AddPatientAsync(patient);
     }

@@ -1,3 +1,4 @@
+using AnimalPulse.Infrastructure.DAL;
 using AnimalPulse.Infrastructure.Exceptions;
 using AnimalPulse.Infrastructure.Logging;
 using Microsoft.AspNetCore.Builder;
@@ -13,6 +14,8 @@ public static class Extensions
     {
         services.AddSingleton<ExceptionMiddleware>();
         services.AddSerilog();
+
+        services.AddPostgres();
 
         return services;
     }

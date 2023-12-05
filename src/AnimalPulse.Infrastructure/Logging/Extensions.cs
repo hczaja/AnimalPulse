@@ -3,6 +3,7 @@ using AnimalPulse.Application.Commands;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Serilog;
+using AnimalPulse.Application.Commands.Handlers;
 
 namespace AnimalPulse.Infrastructure.Logging;
 
