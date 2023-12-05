@@ -1,0 +1,24 @@
+using AnimalPulse.Application.Commands;
+using AnimalPulse.Application.Commands.Handlers;
+
+namespace AnimalPulse.Infrastructure.DAL.Decorators;
+
+internal sealed class UnitOfWorkCommandHandlerDecorator<TCommand>
+    : ICommandHandler<TCommand> where TCommand : class, ICommand
+{
+    private readonly ICommandHandler<TCommand> _commandHandler;
+    private readonly IUnitOfWork _unitOfWork;
+
+    public UnitOfWorkCommandHandlerDecorator(
+        ICommandHandler<TCommand> commandHandler,
+        IUnitOfWork unitOfWork)
+    {
+        this._commandHandler = commandHandler;
+        this._unitOfWork = unitOfWork;
+    }
+
+    public async Task HandleAsync(TCommand command)
+    {
+        await _unitOfWork.ExecuteAsync(() => _commandHandler.HandleAsync(command));
+    }
+}

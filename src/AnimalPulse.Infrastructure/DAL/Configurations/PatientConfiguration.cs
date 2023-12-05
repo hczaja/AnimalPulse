@@ -17,13 +17,25 @@ internal sealed class PatientConfiguration
         builder.Property(x => x.Name)
             .HasConversion(name => name.Value, value => new PatientName(value))
             .IsRequired();
+        builder.Property(x => x.Type)
+            .HasConversion(type => type.Value, value => new PatientType(value))
+            .IsRequired();
+        builder.Property(x => x.Breed)
+            .HasConversion(breed => breed.Value, value => new PatientBreed(value))
+            .IsRequired();
         builder.Property(x => x.Gender)
             .HasConversion(gender => gender.Value, value => new PatientGender(value))
+            .IsRequired();
+        builder.Property(x => x.DateOfBirth)
+            .HasConversion(date => date, value => value)
             .IsRequired();
         builder.Property(x => x.Description)
             .HasConversion(description => description.Value, value => new PatientDescription(value))
             .IsRequired();
         builder.Property(x => x.DateOfBirth)
+            .HasConversion(date => date, value => value)
+            .IsRequired();
+        builder.Property(x => x.DateOfRegister)
             .HasConversion(date => date, value => value)
             .IsRequired();
     }

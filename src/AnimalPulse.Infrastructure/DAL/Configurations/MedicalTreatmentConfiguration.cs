@@ -21,6 +21,9 @@ public class MedicalTreatmentConfiguration
         builder.Property(x => x.Title)
             .HasConversion(title => title.Value, value => new TreatmentTitle(value))
             .IsRequired();
+        builder.Property(x => x.Description)
+            .HasConversion(desc => desc.Value, value => new TreatmentDescription(value))
+            .IsRequired();
         builder.Property(x => x.Notes)
             .HasConversion(notes => notes.Value, value => new TreatmentNotes(value));
         builder.Property(x => x.StartedAt)

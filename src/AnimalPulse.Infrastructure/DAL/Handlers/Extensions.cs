@@ -39,9 +39,8 @@ internal static class Extensions
             Title = treatment.Title,
             Description = treatment.Description,
             Notes = treatment.Notes,
-            StartedAt = treatment.StartedAt,
-            Monitors = treatment.Monitors.Select(m => m.AsDto())
-            
+            StartedAt = treatment.StartedAt
+            //Monitors = treatment.Monitors.Select(m => m.AsDto())
         };
 
     public static MonitorDto AsDto(this MedicalMonitor monitor)

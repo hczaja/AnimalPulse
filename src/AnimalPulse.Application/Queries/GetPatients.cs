@@ -2,5 +2,4 @@ using AnimalPulse.Application.DTO;
 
 namespace AnimalPulse.Application.Queries;
 
-public class GetPatients : IQuery<IEnumerable<PatientBaseDto>>
-{ }
+public record GetPatients : IQuery<IEnumerable<PatientBaseDto>> { }
